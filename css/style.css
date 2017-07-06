@@ -1,0 +1,170 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'CirceRounded-Regular', sans-serif;
+    /*overflow-x: hidden;*/
+    font-size: 18px;
+    line-height: 1.4em;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: 'CirceRounded-Regular';
+    src: url('../webfonts/2F0D6B_2_0.eot');
+    src: url('../webfonts/2F0D6B_2_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/2F0D6B_2_0.woff2') format('woff2'),url('../webfonts/2F0D6B_2_0.woff') format('woff'),url('../webfonts/2F0D6B_2_0.ttf') format('truetype');
+}
+
+.container {
+    position: relative;
+}
+.welcome {
+    position: relative;
+    box-sizing: border-box;
+    background-image: url('../img/sea.jpg');
+    background-size: cover;
+    background-position: 50%;
+    text-align: center;
+}
+.whitestripe {
+    background-color: white;
+    width: 450px;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    /*padding: 0 100px;*/
+}
+.logo {
+    width: 300px;
+    vertical-align: bottom;
+    height: 100%;
+}
+.div-logo {
+    /*border: 1px solid red;*/
+    background-image: url('../img/logo.svg');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 50%;
+}
+.blind {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.body {
+    position: fixed;
+    /*border: 1px solid blue;*/
+    width: 100%;
+    text-align: center;
+}
+.body-fake {
+    width: 100%;
+    text-align: center;
+}
+p {
+    margin-bottom: 20px;
+}
+.we {
+    width: 1000px;
+    display: inline-block;
+    padding-bottom: 100px;
+}
+
+.spouse {
+    text-align: left;
+    width: 500px;
+    box-sizing: border-box;
+    padding: 0 50px 0 50px;
+    float: left;
+}
+.spouse-right {
+    float: right;
+    padding: 0 50px 0 50px;
+}
+h1 {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 300px;
+    padding-bottom: 100px;
+    line-height: 1.2em;
+}
+
+a {
+    color: #00ABEF;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a.name {
+    position: relative;
+    /*border: 1px solid red;*/
+    padding-left: 20px;
+}
+a.name:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/facebook.svg');
+    background-size: auto;
+    /*border: 1px solid red;*/
+}
+
+.contacts {
+    text-align: center;
+}
+
+li {
+    list-style: disc;
+}
+.photo {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    /*background-color: grey;*/
+    background-size: cover;
+}
+.photo-nina {
+    background-image: url('../img/nina.jpg');
+}
+.photo-oleg {
+    background-image: url('../img/oleg.jpg');
+}
+
+
+/*@media screen and (max-width: 699px) and (min-width: 520px) {*/
+@media screen and (max-width: 1000px) {
+    .spouse {
+        width: 100%;
+        padding: 0 10px 0 10px;
+    }
+
+    .we {
+        width: 100%;
+    }
+
+    h1 {
+        padding: 50px 10px;
+    }
+
+    .whitestripe {
+        width: 100%;
+
+    }
+}
