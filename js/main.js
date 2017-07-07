@@ -7,7 +7,7 @@ function init() {
 
     var windowHeight = $( window ).height();
 
-    document.title = $( window ).width();
+    // document.title = $( window ).width();
 
     $('.welcome').css({
         'height' : $( window ).height()

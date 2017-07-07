@@ -3,7 +3,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'CirceRounded-Regular', sans-serif;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     font-size: 18px;
     line-height: 1.4em;
 
@@ -97,6 +97,11 @@ p {
     top: 15px;
     box-sizing: border-box;
 }
+.spouse * {
+}
+.phone {
+    display: inline-block;
+}
 .photo {
     float: left;
     display: inline-block;
@@ -104,6 +109,7 @@ p {
     height: 130px;
     background-image: url('../img/we.jpg');
     background-size: cover;
+    position: relative;
 }
 
 h1 {
@@ -189,14 +195,20 @@ li {
     .we {
         /*border: 1px solid red;*/
         width: 100%;
-        padding: 0 20px;
+        /*padding: 0 20px;*/
+        padding: 0;
     }
-    .spouse, .photo {
-        /*border: 1px solid blue;*/
+    .spouse {
         display: block;
+        /*border: 1px solid grey;*/
         float: none;
         padding: 0;
-        margin-top: 20px;
         top: 0;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    .photo {
+        float: none;
+        left: 20px;
     }
 }
