@@ -3,7 +3,11 @@ var transfer = false;
 
 function init() {
 
+
+
     var windowHeight = $( window ).height();
+
+    document.title = $( window ).width();
 
     $('.welcome').css({
         'height' : $( window ).height()
