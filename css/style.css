@@ -74,24 +74,38 @@ body {
 }
 p {
     margin-bottom: 20px;
-}
-.we {
-    width: 1000px;
-    display: inline-block;
-    padding-bottom: 100px;
+    text-align: left;
 }
 
-.spouse {
+.we {
+    width: 600px;
+    display: inline-block;
     text-align: left;
-    width: 500px;
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+.invitation {
+    display: inline-block;
+    width: 600px;
+}
+.spouse {
+    display: inline-block;
     box-sizing: border-box;
-    padding: 0 50px 0 50px;
+    padding: 0 0px 0 30px;
     float: left;
+    position: relative;
+    top: 15px;
+    box-sizing: border-box;
 }
-.spouse-right {
-    float: right;
-    padding: 0 50px 0 50px;
+.photo {
+    float: left;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    background-image: url('../img/we.jpg');
+    background-size: cover;
 }
+
 h1 {
     text-align: center;
     font-size: 40px;
@@ -149,22 +163,26 @@ li {
 
 
 /*@media screen and (max-width: 699px) and (min-width: 520px) {*/
-@media screen and (max-width: 1000px) {
-    .spouse {
-        width: 100%;
-        padding: 0 10px 0 10px;
-    }
-
-    .we {
-        width: 100%;
-    }
+@media screen and (max-width: 800px) {
 
     h1 {
         padding: 50px 10px;
     }
 
     .whitestripe {
-        width: 100%;
+        width: 90%;
 
+    }
+
+    .invitation {
+        width: 100%;
+    }
+    p {
+        margin: 0 20px;
+    }
+    .we {
+        border: 1px solid red;
+        width: 100%;
+        padding: 0 20px;
     }
 }
