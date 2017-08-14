@@ -21,24 +21,85 @@ body {
     /*src: url('../webfonts/2F0D6B_2_0.eot?#iefix') format('embedded-opentype'),url('../webfonts/2F0D6B_2_0.woff2') format('woff2'),url('../webfonts/2F0D6B_2_0.woff') format('woff'),url('../webfonts/2F0D6B_2_0.ttf') format('truetype');*/
 /*}*/
 
-.container {
-    text-align: center;
-}
-
 .body {
-    width: 600px;
-    display: inline-block;
-    text-align: left;
 }
 
+h1 {
+    padding-top: 100px;
+}
+
+.morning-blind {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    /*border: 1px solid red;*/
+    display: block;
+    top: 0;
+    left; 0;
+
+}
+.container {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    /*border: 1px solid rgba(255,0,0,0.2);*/
+}
+
+.gradient-sunny {
+    background-image: linear-gradient(-180deg, #FFFFFF 0%, #FFFFFF 55%, #FFF1BC 100%);
+    padding-bottom: 100px;
+}
+.gradient-party .txt {
+    margin-bottom: 0;
+}
+.gradient-party p {
+    margin-bottom: 0;
+    color: white;
+}
+.gradient-party {
+    background-image: linear-gradient(-180deg, #FFF1BC 6%, #FFA7A7 55%, #F8259C 100%);
+    padding-top: 400px;
+    /*border: 1px solid black;*/
+
+}
+.gradient-cake {
+    background-image: linear-gradient(-180deg, #F8259C 0%, #580378 26%, #170056 45%, #170101 76%);
+    padding-bottom: 3000px;
+}
+.gradient-flight {
+    background-image: linear-gradient(-180deg, #FFFFFF 0%, #A7FAFF 42%, #00D0FF 91%);
+    padding-bottom: 800px;
+}
+.gradient-white {
+    background-image: none;
+    background-color: white;
+}
+.gradient-suit {
+    background-color: #FFF1BC;
+}
+.cloud {
+    width: 100%;
+    position: relative;
+    height: 150px;
+    background-image: url('../img/cloud.svg');
+    top: -150px;
+}
 .txt {
-    margin-bottom: 30px;
+    position: relative;
+    margin-bottom: 60px;
+    /*border: 1px solid rgba(0,0,0,0.1);*/
+
+    left: 50%;
+    width: 600px;
+    margin-left: -300px;
 }
 
 a {
     color: #00ABEF;
     text-decoration: none;
 }
+
 p,li {
     margin-bottom: 5px;
 }
@@ -55,4 +116,103 @@ a:hover {
 h1 {
     margin-top: 30px;
     text-align: center;
+}
+
+
+.illustr {
+    /*border: 1px solid rgba(0,255,0,0.2);*/
+    position: relative;
+    left: 50%;
+    background-size: cover;
+    animation: multf .4s linear infinite;
+}
+.bus {
+    background-image: url('../img/bus.png');
+    width: 700px;
+    height: 208px;
+    margin-left: -350px;
+    margin-bottom: 80px;
+
+}
+.sunny {
+    background-image: url('../img/sunny.png');
+    width: 661px;
+    height: 184px;
+    margin-left: -330px;
+}
+.suit {
+    background-image: url('../img/suit.png');
+    width: 556px;
+    height: 192px;
+    margin-left: -278px;
+}
+
+@keyframes multf {
+    0%, 32.999% {
+        background-position: 0 -0%;
+    }
+    33%, 65.999% {
+        background-position: 0 -50%;
+    }
+    66%,99.999% {
+        background-position: 0 -100%;
+    }
+    /*100% {*/
+        /*background-position: 0 0%;*/
+    /*}*/
+}
+
+.plane {
+    background-image: url('../img/plane.png');
+    width: 380px;
+    height: 160px;
+    margin-left: -190px;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+}
+
+.salute {
+    background-image: url('../img/salute.png');
+    width: 535px;
+    height: 150px;
+    margin-left: -258px;
+    /*border: 1px solid white;*/
+    top: 100px;
+}
+
+.cake {
+    background-image: url('../img/cake.png');
+    width: 300px;
+    height: 200px;
+    margin-left: -150px;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+}
+
+.saturday {
+    background-image: url('../img/saturday.png');
+    width: 651px;
+    height: 116px;
+    margin-left: -325px;
+    margin-bottom: 100px;
+}
+
+a.name {
+    position: relative;
+    /*border: 1px solid red;*/
+    padding-left: 20px;
+}
+a.name:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/facebook.svg');
+    background-size: auto;
+    /*border: 1px solid red;*/
 }

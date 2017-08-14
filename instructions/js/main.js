@@ -5,51 +5,100 @@ function init() {
 
 
 
+
     var windowHeight = $( window ).height();
 
-    // document.title = $( window ).width();
+    var endNight = $('.gradient-morning').offset().top - windowHeight*1.5;
+    var startMorning = $('.gradient-morning').offset().top - windowHeight;
+    var endMorning = $('.gradient-morning').offset().top - windowHeight/3;
+    var morning = 0;
+    var morBlind = false;
 
-    $('.welcome').css({
-        'height' : $( window ).height()
-    });
+    var saluteMiddle = $('.salute').offset().top - windowHeight/2;
+    var skiMiddle = $('.gradient-flight').offset().top - windowHeight/2;
 
-    if( $('.body').height() < windowHeight ) {
-        $('.body').css({
-           'paddingBottom' : windowHeight-$('.body').height()
-        });
-        $('.body-fake').css({
-            'height' : windowHeight
-        });
-    } else {
-        $('.body-fake').css({
-            'height' : $('.body').height()
-        });
-    }
+    $('.morning-blind').hide();
 
 
     $(window).scroll(function() {
-        var val = $(window).scrollTop() < windowHeight ? (1- $(window).scrollTop() / windowHeight) : 0;
-        $('.blind').css({
-            'opacity' : val
-        });
 
-        if(val == 0) {
-            $('.blind').hide();
+
+        var windowWidth = $( window ).width();
+        var scroll = $(window).scrollTop();
+
+
+        if(scroll > skiMiddle) {
+            var t = (scroll-skiMiddle)/(windowHeight);
+            var planeW = $('.plane').width();
+
+            $('.plane').show();
+            $('.plane').css({
+                'left' : t*(windowWidth),
+                'top' : windowHeight-t*windowHeight*1.3,
+                'opacity' : 1
+            });
         } else {
-            $('.blind').show();
+            $('.plane').hide();
         }
 
-        if ($(window).scrollTop() > windowHeight && !transfer) {
-            transfer = true;
-            $('.body').children().each(function () {
-                $(this).appendTo('.body-fake');
+        if(scroll > saluteMiddle) {
+            var t = (scroll-saluteMiddle)/(windowHeight/2);
+            var opac;
+            var topCake = windowHeight - Math.tanh(t)*(windowHeight/2+100);
+
+            if(t>3 && t<4) {
+                opac = 4-t;
+            } else if(t<= 3){
+                opac = 1;
+            } else {
+                opac = 0;
+            }
+
+            $('.cake').show();
+            $('.cake').css({
+                'left' : windowWidth/2,
+                'top' : topCake,
+                'opacity' : opac
+            });
+        } else {
+            $('.cake').hide();
+        }
+
+
+
+        if (scroll >= startMorning && morning == 0) {
+            morning = 1;
+            $('.gradient-cake').addClass('gradient-white');
+        }
+        if (scroll < startMorning && morning > 0) {
+            morning = 0;
+            $('.gradient-cake').removeClass('gradient-white');
+        }
+
+
+        if (scroll >= endNight && scroll < startMorning) {
+            if(!morBlind) {
+                $('.morning-blind').show();
+                morBlind = true;
+            }
+            var val = (scroll - endNight)/(startMorning-endNight);
+            $('.morning-blind').css({
+                'opacity' : val
             });
         }
-        if ($(window).scrollTop() <= windowHeight && transfer) {
-            transfer = false;
-            $('.body-fake').children().each(function () {
-                $(this).appendTo('.body');
+        if (scroll >= startMorning && scroll < endMorning) {
+            if(!morBlind) {
+                $('.morning-blind').show();
+                morBlind = true;
+            }
+            var val = 1 - (scroll - startMorning)/(endMorning-startMorning);
+            $('.morning-blind').css({
+                'opacity' : val
             });
+        }
+        if(scroll < endNight || scroll >= endMorning) {
+            morBlind = false;
+            $('.morning-blind').hide();
         }
 
 
