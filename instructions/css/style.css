@@ -230,6 +230,22 @@ a.name:before {
     clear: both;
 }
 
+.saturday1 {
+    background-image: url('../img/saturday_left@2x.png');
+    width: 325px;
+    height: 116px;
+    background-size: cover;
+    left: 50%;
+    margin-left: -162px;
+}
+.saturday2 {
+    background-image: url('../img/saturday_right@2x.png');
+    width: 325px;
+    height: 116px;
+    background-size: cover;
+    left: 50%;
+    margin-left: -162px;
+}
 .suit1 {
     background-image: url('../img/suit_left@2x.png');
     width: 278px;

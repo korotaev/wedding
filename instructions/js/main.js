@@ -25,11 +25,11 @@ function init() {
 
     $(window).scroll(function() {
 
-        // endNight = $('.gradient-morning').offset().top - windowHeight*1.5;
-        // startMorning = $('.gradient-morning').offset().top - windowHeight;
-        // endMorning = $('.gradient-morning').offset().top - windowHeight/3;
-        // saluteMiddle = $('.salute').offset().top - windowHeight/2;
-        // skiMiddle = $('.gradient-flight').offset().top - windowHeight/2;
+        endNight = $('.gradient-morning').offset().top - windowHeight*1.5;
+        startMorning = $('.gradient-morning').offset().top - windowHeight;
+        endMorning = $('.gradient-morning').offset().top - windowHeight/3;
+        saluteMiddle = $('.salute').offset().top - windowHeight/2;
+        skiMiddle = $('.gradient-flight').offset().top - windowHeight/2;
 
 
 
@@ -52,7 +52,7 @@ function init() {
             $('.plane').hide();
         }
 
-        document.title = scroll + ' ' + saluteMiddle;
+        // document.title = scroll + ' ' + saluteMiddle;
 
         if(scroll > saluteMiddle) {
             var t = (scroll-saluteMiddle)/(windowHeight/2);
