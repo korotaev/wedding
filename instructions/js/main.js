@@ -14,22 +14,22 @@ function init() {
     var morning = 0;
     var morBlind = false;
 
-    var saluteMiddle = $('.salute').offset().top - windowHeight/2;
+    var saluteMiddle = $('.gradient-party').offset().top - windowHeight/2 + 800;
     var skiMiddle = $('.gradient-flight').offset().top - windowHeight/2;
 
 
-    saluteMiddle = $('.salute').position().top + $('.gradient-party').position().top;
+    // saluteMiddle = $('.salute').position().top + $('.gradient-party').position().top;
 
     $('.morning-blind').hide();
 
 
     $(window).scroll(function() {
 
-        endNight = $('.gradient-morning').offset().top - windowHeight*1.5;
-        startMorning = $('.gradient-morning').offset().top - windowHeight;
-        endMorning = $('.gradient-morning').offset().top - windowHeight/3;
-        saluteMiddle = $('.salute').offset().top - windowHeight/2;
-        skiMiddle = $('.gradient-flight').offset().top - windowHeight/2;
+        // endNight = $('.gradient-morning').offset().top - windowHeight*1.5;
+        // startMorning = $('.gradient-morning').offset().top - windowHeight;
+        // endMorning = $('.gradient-morning').offset().top - windowHeight/3;
+        // saluteMiddle = $('.salute').offset().top - windowHeight/2;
+        // skiMiddle = $('.gradient-flight').offset().top - windowHeight/2;
 
 
 
@@ -68,14 +68,14 @@ function init() {
             }
 
 
-            $('.cake').show();
+            // $('.cake').show();
             $('.cake').css({
                 'left' : windowWidth/2,
                 'top' : topCake,
                 'opacity' : opac
             });
         } else {
-            $('.cake').hide();
+            $('.cake').css({'left' : -1000});
         }
 
 
