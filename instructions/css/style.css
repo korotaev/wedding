@@ -136,13 +136,13 @@ h1 {
 }
 
 .sunny {
-    background-image: url('../img/sunny.png');
+    background-image: url('../img/sunny@2x.png');
     width: 661px;
     height: 184px;
     margin-left: -330px;
 }
 .suit {
-    background-image: url('../img/suit.png');
+    background-image: url('../img/suit@2x.png');
     width: 556px;
     height: 192px;
     margin-left: -278px;
@@ -164,7 +164,7 @@ h1 {
 }
 
 .plane {
-    background-image: url('../img/plane.png');
+    background-image: url('../img/plane@2x.png');
     width: 380px;
     height: 160px;
     margin-left: -190px;
@@ -174,7 +174,7 @@ h1 {
 }
 
 .salute {
-    background-image: url('../img/salute.png');
+    background-image: url('../img/salute@2x.png');
     width: 535px;
     height: 150px;
     margin-left: -258px;
@@ -194,7 +194,7 @@ h1 {
 }
 
 .saturday {
-    background-image: url('../img/saturday.png');
+    background-image: url('../img/saturday@2x.png');
     width: 651px;
     height: 116px;
     margin-left: -325px;
