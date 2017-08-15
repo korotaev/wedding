@@ -17,14 +17,25 @@ function init() {
     var saluteMiddle = $('.salute').offset().top - windowHeight/2;
     var skiMiddle = $('.gradient-flight').offset().top - windowHeight/2;
 
+
+    saluteMiddle = $('.salute').position().top + $('.gradient-party').position().top;
+
     $('.morning-blind').hide();
 
 
     $(window).scroll(function() {
 
+        // endNight = $('.gradient-morning').offset().top - windowHeight*1.5;
+        // startMorning = $('.gradient-morning').offset().top - windowHeight;
+        // endMorning = $('.gradient-morning').offset().top - windowHeight/3;
+        // saluteMiddle = $('.salute').offset().top - windowHeight/2;
+        // skiMiddle = $('.gradient-flight').offset().top - windowHeight/2;
+
+
 
         var windowWidth = $( window ).width();
-        var scroll = $(window).scrollTop();
+        var scroll = $(this).scrollTop();
+        // var scroll = $(window).scrollTop();
 
 
         if(scroll > skiMiddle) {
@@ -41,6 +52,8 @@ function init() {
             $('.plane').hide();
         }
 
+        document.title = scroll + ' ' + saluteMiddle;
+
         if(scroll > saluteMiddle) {
             var t = (scroll-saluteMiddle)/(windowHeight/2);
             var opac;
@@ -54,6 +67,7 @@ function init() {
                 opac = 0;
             }
 
+
             $('.cake').show();
             $('.cake').css({
                 'left' : windowWidth/2,
@@ -63,7 +77,6 @@ function init() {
         } else {
             $('.cake').hide();
         }
-
 
 
         if (scroll >= startMorning && morning == 0) {
@@ -136,4 +149,5 @@ function fac(n) {
 function rand(min, max) {
     return Math.floor(Math.random()*(max-min+1))+1;
 }
+
 

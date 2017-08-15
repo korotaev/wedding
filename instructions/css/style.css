@@ -119,7 +119,7 @@ h1 {
 }
 
 
-.illustr {
+.illustr, .illustr-mobile, .illustr-all {
     /*border: 1px solid rgba(0,255,0,0.2);*/
     position: relative;
     left: 50%;
@@ -127,13 +127,14 @@ h1 {
     animation: multf .4s linear infinite;
 }
 .bus {
-    background-image: url('../img/bus.png');
+    background-image: url('../img/bus@2x.png');
     width: 700px;
     height: 208px;
     margin-left: -350px;
     margin-bottom: 80px;
 
 }
+
 .sunny {
     background-image: url('../img/sunny.png');
     width: 661px;
@@ -149,13 +150,13 @@ h1 {
 
 @keyframes multf {
     0%, 32.999% {
-        background-position: 0 -0%;
+        background-position-y: -0%;
     }
     33%, 65.999% {
-        background-position: 0 -50%;
+        background-position-y: -50%;
     }
     66%,99.999% {
-        background-position: 0 -100%;
+        background-position-y: -100%;
     }
     /*100% {*/
         /*background-position: 0 0%;*/
@@ -182,12 +183,13 @@ h1 {
 }
 
 .cake {
-    background-image: url('../img/cake.png');
+    background-image: url('../img/cake@2x.png');
     width: 300px;
     height: 200px;
     margin-left: -150px;
     position: fixed;
     top: 0;
+    left: -1000px;
     opacity: 0;
 }
 
@@ -215,4 +217,111 @@ a.name:before {
     background-image: url('../img/facebook.svg');
     background-size: auto;
     /*border: 1px solid red;*/
+}
+
+.illustr-mobile {
+    display: none;
+}
+.illustr {
+    display: block;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.suit1 {
+    background-image: url('../img/suit_left@2x.png');
+    width: 278px;
+    height: 192px;
+    background-size: cover;
+    margin-left: -139px;
+}
+.suit2 {
+    background-image: url('../img/suit_right@2x.png');
+    width: 278px;
+    height: 192px;
+    background-size: cover;
+    margin-left: -139px;
+}
+.sunny1 {
+    background-image: url('../img/sunny_left@2x.png');
+    width: 330px;
+    height: 184px;
+    background-size: cover;
+    left: 0;
+    float: right;
+}
+.sunny2 {
+    background-image: url('../img/sunny_right@2x.png');
+    width: 330px;
+    height: 184px;
+    background-size: cover;
+    left: 0;
+}
+.bus1 {
+    background-image: url('../img/bus_left@2x.png');
+    width: 350px;
+    height: 208px;
+    background-size: cover;
+    left: 0;
+    float: right;
+    /*border: 1px solid red;*/
+    margin-bottom: 30px;
+}
+.bus2 {
+    background-image: url('../img/bus_right@2x.png');
+    width: 350px;
+    height: 208px;
+    background-size: cover;
+    left: 0;
+    margin-bottom: 30px;
+}
+.salute1 {
+    background-image: url('../img/salute_left@2x.png');
+    width: 316px;
+    height: 150px;
+    background-size: cover;
+    left: 50%;
+    margin-left: -158px;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+    h1 {
+        padding: 0;
+        padding-top: 20px;
+    }
+    .container {
+        /*padding: 0 15px;*/
+    }
+    .txt {
+        /*border: 1px solid blue;*/
+        margin-bottom: 60px;
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+    }
+    /*.gradient-suit .txt {*/
+        /*margin-bottom: 0px;*/
+    /*}*/
+    .txt p, .txt ul {
+        padding: 0 15px;
+
+    }
+    .txt * {
+        margin-bottom: 0;
+    }
+
+    .gradient-cake {
+        padding-bottom: 1500px;
+    }
+
+    .illustr {
+        display: none;
+    }
+    .illustr-mobile {
+        display: block;
+    }
+
 }
